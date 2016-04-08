@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Online Classroom: Proctor Selection</title>
+<link href="proctorselect.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header><img src="tna_logo.jpg" alt="The National Alliance"></header>
+  <div id="thewholething">  
+    <form id="procsubmission"><p>Please select the option that applies to you.</p>
+
+<p>I am taking a: <select id="onlineClass" name="onlineClass">
+    	<option value="CIC">CIC Online</option>
+        <option value="CRM">CRM Online</option>
+    </select> class.</p>
+   <p><label for="classList">Select your Online Course: </label><select id="classList" name="classList"></select></p>
+	<p>I am taking my exam with: <select id="proctype" name="proctype">
+    	<option value="ProctorU">ProctorU</option>
+        <option value="approved">Proctor from list</option>
+    </select></p>
+    
+    <p> If you do not know your National Alliance Member Number, please login to <a href="https://mypage.scic.com/Account/LogOn" target="_blank">MyPage</a> to retrieve it.</p><p class="proctor-stuff"><strong>Type in and select your proctor's state and city before locating them in the Proctor list or click on each box to bring up a dropdown menu.</strong></p><p class="proctor-stuff">If you would like to use a proctor not listed, please contact <a href="mailto:EMAdmin@scic.com">EMAdmin@scic.com</a></p>
+    <div id="names">
+    	<label for="natid">National Alliance #: </label><input id="natid" type="number" name="natid">
+   		<label for="fname">First Name: </label><input id ="fname" type="text" name="fname">
+    	<label for="lname">Last Name: </label><input id="lname" type="text" name="lname">
+    	<label for="studentEmail">Email: </label><input id="studentEmail" type="text" name="studentEmail">
+    	</div>
+    
+  
+    <div id="approved-proctors" class="proctor-stuff">
+    <label for="apprState">Proctor State: </label><input id="apprState" list="appStateList" name="apprState"><datalist id="appStateList">
+    </datalist>
+    <label for="apprCity">Proctor City: </label><input id="apprCity" list="appCityList" name="apprCity"><datalist id="appCityList"></datalist>
+    <label for="apprLoc">Proctor: </label><select id="apprLoc" name="apprLoc"></select>
+    <div><label for="apprAddress">Proctor Address: </label><input id="apprAddress" type="text" readonly>
+    <label for="apprZip"> Proctor Zip: </label><input type="text" id="apprZip" readonly></div>
+    <div><label for="apprContact">Contact: </label><input type="text" id="apprContact" readonly>
+    <label for="apprEmail">Proctor Email: </label><input type="text" id="apprEmail" readonly>
+    <label for="apprPhone">Proctor Phone: </label><input type="tel" id="apprPhone" readonly></div>
+    </div>
+    
+    <div id="examinfo"><label for="examtype">Type of Exam: </label><select id="examtype" name="examtype"></select>
+    <label for="examdate">Date of Exam: </label><input id="examdate" type="date" name="examdate">
+    <label for="examtime">Time of Exam: </label><input id="examtime" type="time" name="examtime">
+    <label for="timezone"> Timezone: </label><select id="timezone" name="timezone">
+    <option value="AST">Atlantic Time</option>
+    <option value="EST">Eastern Time</option>
+    <option value="CST">Central Time</option>
+    <option value="MST">Mountain Time</option>
+    <option value="PST">Pacific Time</option>
+    <option value="DST">Alaskan Time</option>
+    <option value="HST">Hawaii Time</option></select>
+    </div>
+    <div id="agreement"><input type="checkbox" id="sAgree" name="sAgree">
+    <label for="sAgree">I, the student named above, agree to the following, (1) I have scheduled my exam with the proctor listed above, according to the published dates; and (2) I have arranged for fee payment for the proctoring services, if any.<br/><br/>
+      The information I have provided is correct to the best of my knowledge.<br/><br/><strong>I understand that my exam must be completed by the last day of the published exam period and that there will be no exceptions to the deadline.</strong></label></div>
+    
+    <div id="endOfForm"><button type="reset" id="formReset">Reset</button> <button type="submit" id="formSub">Submit</button></div>
+    </form>
+</div>
+<div id="ltext" class="loadingtext"><p>Please wait while your information is being submitted.</p></div>
+<div id="ftext" class="finishedtext"><p>Your proctor selection has been submitted.</p></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="procselectjquery.js"></script>
+</body>
+</html>

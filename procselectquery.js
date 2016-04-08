@@ -167,7 +167,6 @@ $(document).ready(function() {
 			$('.proctor-stuff').show();
 			$('#apprState').removeClass('valid').addClass('invalid');
 			$('#apprCity').removeClass('valid').addClass('invalid');
-			$('#apprLoc').removeClass('valid').addClass('invalid');
 		}
 	});
 	
@@ -190,6 +189,7 @@ $(document).ready(function() {
 		
 		if ($('#apprLoc').size() === 1) {
 			getLocation(stateselect, cityselect, $('#apprLoc').val());
+			$('#apprLoc').removeClass('invalid').addClass('valid');	
 			}
 		else
 		{ return cityselect; }
@@ -197,11 +197,11 @@ $(document).ready(function() {
 	});
 	
 	$('#apprLoc').on('change', function() {
-	if ($(this).val())
-	{$(this).removeClass('invalid').addClass('valid');}
-	else
-	{$(this).removeClass('valid').addClass('invalid');}
-	
+		if ($(this).val()) 
+			{ $(this).removeClass('invalid').addClass('valid');	}
+			else
+			{$(this).removeClass('valid').addClass('invalid');}
+		
 	getLocation(stateselect, cityselect, $('#apprLoc').val());
 	
 	});

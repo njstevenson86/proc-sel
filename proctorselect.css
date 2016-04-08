@@ -1,0 +1,161 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-color: #FFFFFF;
+}
+
+table {
+	text-align: left;
+	width: 90%;
+}
+
+div .row {
+	margin: 10px 3px 10px 3px;
+}
+
+h1 {
+	font-size: 1.3em;
+}
+
+th, td {
+	font-size: .9em;
+ 	word-wrap: break-word;	
+	vertical-align: text-top;
+	padding: 8px;
+	border-bottom: 1px solid #660032;
+}
+
+button {
+	height: 2.2em;
+	color: white;
+	background-color:#e0b12f;	
+	border: none;
+	margin-left: 5px;
+	margin-right: 25px;
+}
+
+button:focus {
+	outline: none;
+}
+
+form {
+margin: auto;
+position: relative;
+width: 600px;
+background-color:#DCDCDC;
+border-radius: 4px;	
+padding: 15px;
+}
+
+input, select {
+	height: 1.6em;
+	border: 1px solid #000;
+	border-radius: 4px;
+	display: block;
+	width: 100%;
+
+}
+
+
+
+#names, #approved-proctors {
+	position: relative;
+	display: inline;
+	width: 45%;
+
+}
+
+#names {
+	float: left;
+}
+
+#approved-proctors {
+	float: right;
+}
+
+#examinfo {
+	position:relative;
+	display:block;
+	float: none;
+	clear:both;
+}
+
+
+input[type=checkbox] {
+width: 1em;
+border: none;
+display: inline;
+}
+
+p {
+
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#endOfForm {
+	margin-top: 1em;
+	text-align:center;
+}
+
+#endOfForm button {
+	height: 2em;
+	width: 4em;
+	font-size: 1em;
+}
+
+#procsubmission input {
+margin-top: .3em;
+margin-right: 2em;
+margin-bottom: .3em;
+height: 1.2em;
+}
+
+#natid {
+	width: 8em;	
+	height: 1.2em;
+}
+
+.error {
+	display: none;
+	margin-left: 10px;
+}
+
+.error_show{
+	color: red;
+	margin-left: 10px;
+}
+
+input.invalid, textarea.invalid{
+	border: 2px solid red;
+}
+
+input.valid, textarea.valid{
+	border: 2px solid green;
+}
+
+div.invalid {
+	border: 2px solid red;
+}
+
+div.valid {
+	border: 2px solid green;
+}
+
+#approved-proctors, .proctor-stuff, div.loadingtext, div.finishedtext {
+	display: none;
+}
+
+#onlineClass {
+	display: inline;
+	width: 100px;	
+}
+
+#classList, #proctype {
+	width: 170px;
+}
